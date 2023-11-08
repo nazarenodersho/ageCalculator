@@ -1,0 +1,105 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif; }
+
+body {
+  background-color: #f0f0f0; }
+
+.container {
+  background-color: white;
+  padding: 40px 20px 40px 20px;
+  margin: 20px;
+  border-radius: 15px 15px 100px 15px; }
+  .container ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 5px; }
+    .container ul li h2 {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      color: #716f6f;
+      margin-bottom: 3px; }
+    .container ul li input {
+      border: #dbdbdb solid 1.5px;
+      border-radius: 10px;
+      outline: none;
+      max-width: 5rem;
+      height: 3rem;
+      padding-left: 10px;
+      font-size: 1.2rem;
+      font-weight: 700; }
+  .container .arrowContainer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    position: relative; }
+    .container .arrowContainer .icon {
+      background-color: #854dff;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 2; }
+      .container .arrowContainer .icon img {
+        height: 1.2rem;
+        width: auto; }
+    .container .arrowContainer .icon:hover {
+      background-color: #141414; }
+  .container .arrowContainer::before {
+    content: '';
+    width: 95%;
+    border-bottom: 2px solid #dbdbdb;
+    position: absolute;
+    top: 50%;
+    z-index: 1; }
+  .container .calculator {
+    margin-top: 20px;
+    flex-direction: column; }
+    .container .calculator h3 {
+      color: #141414;
+      font-weight: 800;
+      font-style: italic;
+      font-size: 2.8rem; }
+    .container .calculator .data {
+      color: #854dff;
+      margin-right: 5px; }
+
+.attribution {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px; }
+  .attribution h3 {
+    font-size: 0.8rem; }
+    .attribution h3 a {
+      color: #854dff;
+      text-decoration: none; }
+
+/* Media Queries */
+@media screen and (min-width: 600px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; }
+  .container {
+    min-width: 550px;
+    min-height: 430px;
+    padding: 40px; }
+    .container ul {
+      justify-content: flex-start;
+      gap: 20px; }
+      .container ul input {
+        min-width: 7rem; }
+      .container ul input:hover {
+        border: #854dff solid 1.5px; }
+  .arrowContainer .icon {
+    position: relative;
+    left: 200px; } }
